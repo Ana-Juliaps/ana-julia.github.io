@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ana Júlia Pereira Silva — estudante de Ciência da Computação e técnica em Redes. Portfólio com currículo e projetos." />
+  <title>Ana Júlia - Site Pessoal</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <img
+        src="IMG-20260123-WA0066.jpg"
+        srcset="IMG-20260123-WA0066-400.jpg 400w, IMG-20260123-WA0066-800.jpg 800w"
+        sizes="(max-width:600px) 100vw, 150px"
+        alt="Ana Júlia retrato profissional"
+        class="profile-photo"
+        loading="lazy"
+        width="150"
+        height="150"
+      />
+      <div class="title-block">
+        <h1>Ana Júlia</h1>
+        <p class="tagline">Bem-vindo ao meu site pessoal</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav" role="navigation" aria-label="Menu principal">
+    <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list" class="nav-toggle">
+      Menu
+    </button>
+    <ul id="nav-list" class="nav-list">
+      <li><a href="#inicio" aria-current="page">Início</a></li>
+      <li><a href="#perfil">Perfil</a></li>
+      <li><a href="#curriculo">Currículo</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="site-main">
+    <section id="inicio" class="section">
+      <h2>Início</h2>
+      <p>Olá! Este é meu site pessoal. Aqui você vai conhecer mais sobre mim, meu currículo e meus projetos.</p>
+    </section>
+
+    <section id="perfil" class="section">
+      <h2>Perfil</h2>
+      <p>Sou <strong>Ana Júlia Pereira Silva</strong>, estudante do 3º semestre de Ciência da Computação e técnica em Redes de Computadores. Tenho facilidade em desenvolver projetos digitais e busco aprimorar minhas habilidades na área de tecnologia.</p>
+      <p>Sou organizada, criativa e tenho comunicação clara, o que me permite colaborar bem em equipe. Destaco-me pela atenção aos detalhes, responsabilidade e capacidade de aprender com agilidade. Gosto de transformar ideias em soluções práticas, com foco na qualidade e nos prazos.</p>
+      <p>Busco novas oportunidades para crescer na área de TI e aplicar o que venho aprendendo.</p>
+    </section>
+
+    <section id="curriculo" class="section">
+      <h2>Currículo</h2>
+
+      <h3>Formação</h3>
+      <p>Técnico em Redes de Computadores — SENAI (Conclusão: Dezembro de 2024)</p>
+
+      <h3>Experiência</h3>
+      <ul>
+        <li>F1 in Schools — torneio de robótica</li>
+        <li>Participante da competição nacional da temporada de 2023</li>
+        <li>Atuação no desenvolvimento de projetos técnicos e digitais</li>
+        <li>Indicada ao prêmio de Melhor Desenvolvimento Feminino</li>
+      </ul>
+      <p><a href="https://www.sistemafibra.org.br/sesi/imprensa/noticias/2032-equipe-lobo-caninde-representara-o-sesi-df-na-f1-in-schools" target="_blank" rel="noopener noreferrer">Ver matéria oficial sobre a equipe Lobo Canindé</a></p>
+
+      <h3>Habilidades</h3>
+      <ul>
+        <li>Redes de computadores: configuração e manutenção</li>
+        <li>Conhecimentos iniciais em programação</li>
+        <li>Criação e execução de projetos digitais</li>
+        <li>Ferramentas de produtividade: Google Drive, Microsoft Office</li>
+        <li>Trabalho em equipe e gestão de tarefas</li>
+      </ul>
+
+      <h3>Idiomas</h3>
+      <ul>
+        <li>Português (nativo)</li>
+        <li>Inglês (intermediário)</li>
+      </ul>
+
+      <p>
+        <a class="btn-download" href="curriculo.pdf" download>📄 Baixar Currículo em PDF</a>
+      </p>
+    </section>
+
+    <section id="projetos" class="section">
+      <h2>Projetos</h2>
+
+      <article class="project">
+        <h3>Projeto Social</h3>
+        <p>O programa F1 in Schools desafia jovens a desenvolver habilidades de empreendedorismo e tecnologia. Além do protótipo de veículo, as equipes preparam plano de negócios, estratégias de marketing e ações sociais.</p>
+        <p>A escuderia Lobo Canindé criou o projeto <strong>Garotas no Futuro</strong>, que incentiva meninas no universo STEM oferecendo aulas de programação ministradas por professoras voluntárias.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p><strong>Entre em contato</strong></p>
+      <p class="contacts">
+        <a href="mailto:anjulyapereira@gmail.com">E-mail</a>
+        <a href="https://www.linkedin.com/in/ana-j%C3%BAlia-pereira-silva-92a59a364/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/Ana-Juliaps" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+      <p class="copyright">© <span id="year"></span> Ana Júlia</p>
+    </div>
+  </footer>
+
+  <script>
+    // Menu toggle acessível
+    const navToggle = document.getElementById('nav-toggle');
+    const navList = document.getElementById('nav-list');
+
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+
+    // Atualiza ano no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Marca link ativo ao rolar (simples)
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-list a');
+
+    function onScroll() {
+      const scrollPos = window.scrollY + 120;
+      sections.forEach(section => {
+        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+          navLinks.forEach(a => a.removeAttribute('aria-current'));
+          const link = document.querySelector('.nav-list a[href="#' + section.id + '"]');
+          if (link) link.setAttribute('aria-current', 'page');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>
