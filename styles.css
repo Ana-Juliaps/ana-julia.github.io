@@ -131,7 +131,7 @@ body{
   margin-top:0;
 }
 
-/* Buttons and links */
+/* Buttons e links */
 .btn-download{
   display:inline-block;
   background:var(--accent);
@@ -173,3 +173,4 @@ a:focus-visible, button:focus-visible {
   outline-offset:3px;
   border-radius:6px;
 }
+
